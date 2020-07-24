@@ -3,7 +3,6 @@ import React from "react";
 import Header from "./components/Header/Header";
 import SearchInput from "./components/SearchInput/SearchInput";
 import FrogList from "./components/FrogList/FrogList";
-import "./assets/froggie.json";
 
 import "./App.css";
 
