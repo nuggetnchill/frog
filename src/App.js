@@ -1,8 +1,11 @@
 import React from "react";
+import tachyons from "tachyons";
 
 import Header from "./components/Header/Header";
 import SearchInput from "./components/SearchInput/SearchInput";
 import FrogList from "./components/FrogList/FrogList";
+import ErrorBoundary from "./components/ErrorBoundary";
+import Scroll from "./components/Scroll";
 
 import "./App.css";
 
@@ -37,9 +40,14 @@ class App extends React.Component {
     });
     return (
       <div className='App'>
-        <Header />
-        <SearchInput searchChange={this.onSearchChange} />
-        <FrogList frogs={filteredFrog} />
+        <Header>
+          <SearchInput searchChange={this.onSearchChange} />
+        </Header>
+        <Scroll>
+          <ErrorBoundary>
+            <FrogList frogs={filteredFrog} />
+          </ErrorBoundary>
+        </Scroll>
       </div>
     );
   }

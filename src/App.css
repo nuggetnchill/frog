@@ -5,11 +5,13 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
+  background: linear-gradient(to left, #00fd4c6c 0%, #eef1366b 100%);
+  font-family: "Roboto Mono", monospace;
+  line-height: 1.2;
+  padding: 10px;
 }
 
-/* a {
-  color:#333;
-  text-decoration: none;
-} */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}

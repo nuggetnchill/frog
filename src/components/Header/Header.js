@@ -1,18 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import './Header.css';
+import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className='container'>
-      <div>
-        <h1 className='header'>
-          What Frog are you?{' '}
-          <span role='img' aria-label='frog'>
-            🐸
-          </span>
-        </h1>
-      </div>
+      <h1 className='f1 purple flex justify-center header'>
+        What Frog Are You?{" "}
+        <span role='img' aria-label='frog'>
+          🐸
+        </span>
+      </h1>
+      {props.children}
     </div>
   );
 };
