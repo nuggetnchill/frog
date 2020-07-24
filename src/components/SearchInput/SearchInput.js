@@ -1,29 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import './SearchInput.css';
+import "./SearchInput.css";
 
-class SearchInput extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
-  onChange = (event) => {
-    this.setState({ searchfield: event.target.value });
-  };
-
-  render() {
-    return (
-      <div className='container'>
-        <input
-          className='search-bar'
-          type='search'
-          placeholder='Type your name here...'
-          onChange={this.onChange}
-        />
-      </div>
-    );
-  }
-}
+const SearchInput = ({ searchfield, searchChange }) => {
+  return (
+    <div className='container'>
+      <input
+        className='search-input'
+        type='search'
+        placeholder='Type your name here...'
+        onChange={searchChange}
+      />
+    </div>
+  );
+};
 
 export default SearchInput;
