@@ -1,30 +1,34 @@
-import React from "react";
-import tachyons from "tachyons";
+import React from 'react';
+import tachyons from 'tachyons';
 
-import Header from "./components/Header/Header";
-import SearchInput from "./components/SearchInput/SearchInput";
-import FrogList from "./components/FrogList/FrogList";
-import ErrorBoundary from "./components/ErrorBoundary";
-import Scroll from "./components/Scroll";
+import Header from './components/Header/Header';
+import SearchInput from './components/SearchInput/SearchInput';
+import FrogList from './components/FrogList/FrogList';
+import ErrorBoundary from './components/ErrorBoundary';
+import Scroll from './components/Scroll';
 
-import "./App.css";
+import './App.css';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       frogs: [],
-      searchfield: "",
+      searchfield: '',
     };
   }
 
   componentDidMount() {
-    fetch("./froggie.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
+    //   fetch("./froggie.json", {
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       Accept: "application/json",
+    //     },
+    //   })
+    //     .then((response) => response.json())
+    //     .then((demfrogs) => this.setState({ frogs: demfrogs }));
+    // }
+    fetch('https://nuggetnchill.github.io/frog-api/frog-api.json')
       .then((response) => response.json())
       .then((demfrogs) => this.setState({ frogs: demfrogs }));
   }
